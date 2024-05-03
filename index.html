@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayStation Consoles</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            text-align: center;
+            color: #fff;
+        }
+        .header {
+            background-color: #101820FF;
+            color: #F2AA4CFF;
+            padding: 20px 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .console {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .console:hover {
+            transform: scale(1.03);
+        }
+        .console img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        .description {
+            padding: 20px;
+            text-align: left;
+            line-height: 1.6;
+            color: #333;
+        }
+        .animated-button {
+            padding: 10px 25px;
+            font-size: 16px;
+            color: #000;
+            background: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s ease;
+        }
+        .animated-button span {
+            position: relative;
+            z-index: 2;
+        }
+        .animated-button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .animated-button:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>PlayStation Consoles</h1>
+    </div>
+    <div class="container">
+        <!-- PlayStation 1 -->
+        <div class="console">
+            <img src="ps1.jpg" alt="PlayStation 1" id="ps1-img">
+            <button class="animated-button" onclick="changeImage('ps1-img', 'ps1-other.jpg')">
+                <span>Show Different Image</span>
+            </button>
+            <div class="description">
+                <h2>PlayStation 1</h2>
+                <p>The PlayStation 1 (PS1) is a home video game console developed and marketed by Sony Computer Entertainment. It was released in December 1994 and was the first of the PlayStation lineup of video game consoles.</p>
+            </div>
+        </div>
+        <!-- PlayStation 2 -->
+        <div class="console">
+            <img src="ps2.jpg" alt="PlayStation 2" id="ps2-img">
+            <button class="animated-button" onclick="changeImage('ps2-img', 'ps2-other.jpg')">
+                <span>Show Different Image</span>
+            </button>
+            <div class="description">
+                <h2>PlayStation 2</h2>
+                <p>The PlayStation 2 (PS2) is a home video game console developed and marketed by Sony Computer Entertainment. It was released in March 2000 and is the best-selling video game console of all time, having sold over 155 million units worldwide.</p>
+            </div>
+        </div>
+        <!-- PlayStation 3 -->
+        <div class="console">
+            <img src="ps3.jpg" alt="PlayStation 3" id="ps3-img">
+            <button class="animated-button" onclick="changeImage('ps3-img', 'ps3-other.jpg')">
+                <span>Show Different Image</span>
+            </button>
+            <div class="description">
+                <h2>PlayStation 3</h2>
+                <p>The PlayStation 3 (PS3) is a home video game console developed by Sony Computer Entertainment. It was released in November 2006 and introduced features like the PlayStation Network, multimedia capabilities, and a unified online gaming service.</p>
+            </div>
+        </div>
+        <!-- PlayStation 4 -->
+        <div class="console">
+            <img src="ps4.jpg" alt="PlayStation 4" id="ps4-img">
+            <button class="animated-button" onclick="changeImage('ps4-img', 'ps4-other.jpg')">
+                <span>Show Different Image</span>
+            </button>
+            <div class="description">
+                <h2>PlayStation 4</h2>
+                <p>The PlayStation 4 (PS4) is a home video game console developed by Sony Interactive Entertainment. Released in November 2013, it competes with Microsoft's Xbox One and Nintendo's Wii U and Switch.</p>
+            </div>
+        </div>
+        <!-- PlayStation 5 -->
+        <div class="console">
+            <img src="ps5.jpg" alt="PlayStation 5" id="ps5-img">
+            <button class="animated-button" onclick="changeImage('ps5-img', 'ps5-other.jpg')">
+                <span>Show Different Image</span>
+            </button>
+            <div class="description">
+                <h2>PlayStation 5</h2>
+                <p>The PlayStation 5 (PS5) is the latest home video game console developed by Sony Interactive Entertainment. Announced in 2019 and released in November 2020, it offers advanced graphics performance, a new controller with haptic feedback, and faster loading times.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeImage(imgId, newSrc) {
+            var imgElement = document.getElementById(imgId);
+            imgElement.src = newSrc;
+        }
+    </script>
+</body>
+</html>
